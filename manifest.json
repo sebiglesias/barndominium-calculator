@@ -1,0 +1,16 @@
+{
+  "name": "Barndominium & Pole Barn Cost Calculator",
+  "short_name": "BarnCost",
+  "description": "Estimate total build cost per square foot for barndominiums, pole barn homes, and post-frame shops with slab, shell, and turnkey breakdown.",
+  "start_url": "/barndominium-calculator/",
+  "display": "standalone",
+  "background_color": "#0c0a09",
+  "theme_color": "#ea580c",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64 128x128 256x256",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barndominium Cost Calculator — 2026 Price per Sq Ft Estimator</title>
+  <meta name="description" content="Calculate the realistic cost to build a barndominium or pole barn home. Estimate shell-only, semi-turnkey, and full turnkey builds with concrete slab, framing, and interior finishes.">
+  <link rel="canonical" href="https://sebiglesias.com.ar/barndominium-calculator/">
+  <meta name="theme-color" content="#ea580c">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Barndominium Cost Calculator — 2026 Price per Sq Ft Estimator">
+  <meta property="og:description" content="Calculate realistic costs to build a barndominium or pole barn home with slab, shell kit, framing, and turnkey finishes.">
+  <meta property="og:url" content="https://sebiglesias.com.ar/barndominium-calculator/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BNDBQP0W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BNDBQP0W7');
+  </script>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-3381238987477190">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3381238987477190" crossorigin="anonymous"></script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Barndominium & Pole Barn Cost Calculator",
+      "url": "https://sebiglesias.com.ar/barndominium-calculator/",
+      "applicationCategory": "ConstructionApplication",
+      "operatingSystem": "Any",
+      "description": "Calculate itemized construction costs per square foot for post-frame metal building homes, concrete foundations, and turnkey living spaces.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does it cost to build a 2,000 sq ft barndominium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In 2026, building a 2,000 sq ft barndominium typically ranges from $90,000 to $130,000 for a dried-in shell (including concrete slab and metal building kit), and $240,000 to $360,000 ($120 to $180 per sq ft) for a fully finished turnkey residential home with plumbing, HVAC, and interior finishes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a barndominium cheaper than a traditional stick-built home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, barndominiums are typically 15% to 30% less expensive per square foot than traditional custom-built wooden stick frame homes. Cost savings come from rapid shell erection, simpler engineered truss systems, clear-span interior freedom eliminating interior load-bearing walls, and low-maintenance steel siding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How thick should a barndominium concrete slab be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 4-inch concrete slab reinforced with rebar or wire mesh is standard for residential living quarters. For shop, garage, or vehicle storage areas that will support heavy diesel trucks, tractors, or automotive lifts, a 6-inch 4,000 PSI slab with thickened perimeter footings is recommended."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">🏡 2026 Construction Cost Benchmarks</div>
+      <h1>Barndominium & Pole Barn Cost Calculator</h1>
+      <p class="subtitle">Estimate total build budget, price per square foot, and itemized material costs for custom metal homes, post-frame shops, and living quarters.</p>
+
+      <div class="presets-bar">
+        <button class="preset-btn" data-preset="starter">30×40 Starter (1,200 sq ft)</button>
+        <button class="preset-btn active" data-preset="family_shop">40×60 Popular (2,400 sq ft)</button>
+        <button class="preset-btn" data-preset="estate">50×80 Estate (4,000 sq ft)</button>
+        <button class="preset-btn" data-preset="shell_diy">40×60 Shell Only (DIY)</button>
+      </div>
+    </header>
+
+    <!-- Top AdSense Banner -->
+    <div style="text-align:center; margin: 16px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="calc-grid">
+      <!-- Dimensions & Specs Card -->
+      <div class="card">
+        <h2>📐 Building Dimensions & Shell</h2>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label for="bWidth">Width (ft)</label>
+            <div class="input-wrap">
+              <input type="number" id="bWidth" value="40" min="20" max="120" step="5">
+              <span class="input-suffix">ft</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bLength">Length (ft)</label>
+            <div class="input-wrap">
+              <input type="number" id="bLength" value="60" min="24" max="200" step="5">
+              <span class="input-suffix">ft</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="bHeight">
+            Eave Height
+            <span class="hint">14-16 ft enables 2-story lofts</span>
+          </label>
+          <div class="input-wrap">
+            <input type="number" id="bHeight" value="16" min="10" max="24" step="2">
+            <span class="input-suffix">ft</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>
+            Floorplan Allocation
+            <span class="hint" id="splitValLabel">60% Living / 40% Shop</span>
+          </label>
+          <input type="range" id="bSplit" min="10" max="100" value="60" step="5">
+          <div class="split-visual">
+            <div class="split-living" id="splitLivingBar" style="width:60%;">Living Area</div>
+            <div class="split-shop" id="splitShopBar" style="width:40%;">Shop / Garage</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="finishLevel">Finish Tier & Turnkey Level</label>
+          <select id="finishLevel">
+            <option value="turnkey" selected>Turnkey Residential Home (Move-In Ready)</option>
+            <option value="semi_turnkey">Semi-Turnkey (Drywall, Rough MEP, Spray Foam)</option>
+            <option value="shell">Shell Only (Foundation, Kit & Erection Only)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="slabType">Concrete Slab Specification</label>
+          <select id="slabType">
+            <option value="4inch" selected>4-Inch Slab (Standard Living / Light Garage)</option>
+            <option value="6inch">6-Inch Slab (Heavy Equipment, Lift & Shop)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Cost Breakdown & Summary Card -->
+      <div class="card">
+        <h2>💰 Estimated Build Cost</h2>
+
+        <div class="result-hero">
+          <div class="result-label">Estimated Total Budget</div>
+          <div class="result-number" id="totalBudget">$284,500</div>
+          <div class="range-spread" id="budgetRange">$250,360 – $327,175</div>
+        </div>
+
+        <div class="result-stat-grid">
+          <div class="stat-item">
+            <div class="stat-desc">Cost per Sq Ft</div>
+            <div class="stat-val" id="costPerSqFt">$119 / sq ft</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-desc">Total Building Footprint</div>
+            <div class="stat-val" id="totalArea">2,400 sq ft</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-desc">Finished Living Space</div>
+            <div class="stat-val" style="color:#fdba74;" id="livingArea">1,440 sq ft</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-desc">Shop / Garage Space</div>
+            <div class="stat-val" style="color:#a8a29e;" id="shopArea">960 sq ft</div>
+          </div>
+        </div>
+
+        <!-- Breakdown Table -->
+        <table class="breakdown-table">
+          <thead>
+            <tr>
+              <th>Phase / Component</th>
+              <th>Estimated Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Concrete Slab & Footings</td>
+              <td id="tdSlab">$18,600</td>
+            </tr>
+            <tr>
+              <td>Steel Frame & Siding Shell Kit</td>
+              <td id="tdShell">$62,400</td>
+            </tr>
+            <tr>
+              <td>Spray Foam Insulation (Closed-Cell)</td>
+              <td id="tdInsulation">$11,026</td>
+            </tr>
+            <tr>
+              <td>Interior Stud Framing & Drywall</td>
+              <td id="tdFraming">$49,920</td>
+            </tr>
+            <tr>
+              <td>MEP (HVAC, Plumbing, Electrical)</td>
+              <td id="tdMep">$60,480</td>
+            </tr>
+            <tr>
+              <td>Cabinets, Baths, Counters & Flooring</td>
+              <td id="tdFinishes">$69,120</td>
+            </tr>
+            <tr>
+              <td>Site Prep, Permits & Engineering</td>
+              <td id="tdSite">$8,500</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button class="btn-export" id="copyBtn">📋 Copy Itemized Estimate to Clipboard</button>
+      </div>
+    </div>
+
+    <!-- Amazon Tool & Floorplan Supplies Card (tag sebiglesias-20) -->
+    <div class="supplies-card">
+      <h3>🛠️ Planning Tools & Construction Gear</h3>
+      <div class="supplies-grid">
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Barndominium Floor Plan Books</div>
+            <div class="supply-desc">Architectural layout catalogs with CAD blueprints and electrical layouts.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=barndominium+floor+plans+book&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Browse Plans on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Laser Distance Measure 330ft</div>
+            <div class="supply-desc">Digital high-accuracy laser measure with angle sensor and area calculations.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=laser+distance+measurer+300ft&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">View on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Rotary Green Laser Level</div>
+            <div class="supply-desc">Self-leveling 360° laser for foundation leveling and steel post alignment.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=green+beam+rotary+laser+level&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">View on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Cordless Framing Nailer Kit</div>
+            <div class="supply-desc">21-degree heavy duty framing gun for interior stud framing and wood trusses.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=cordless+framing+nailer+21+degree&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Guide Section -->
+    <section class="guide-section">
+      <h2>Comprehensive Guide: How Barndominium Costs Are Calculated</h2>
+      <p>Building a barndominium (or pole-barn home) provides tremendous flexibility, architectural freedom with wide open spans, and reduced long-term maintenance compared to traditional wood-frame homes. However, understanding where your construction dollars go is critical for avoiding cost overruns:</p>
+      
+      <p><strong>1. Foundation & Concrete ($7.50 to $11.00 / sq ft):</strong> The concrete slab serves as both your subfloor and the structural anchor for your steel posts. A 4-inch 3,500 PSI slab with wire mesh and perimeter footings is standard for residential living. If your floorplan incorporates a heavy automotive shop or equipment bay, upgrading to a 6-inch slab with #4 rebar on 16" centers prevents cracking under heavy vehicle loads.</p>
+      
+      <p><strong>2. Engineered Metal Shell ($22.00 to $32.00 / sq ft):</strong> The pre-engineered post-frame kit includes main columns, roof trusses, purlins, girts, and 26-gauge colored steel exterior siding with trim. Erection labor typically represents 35% to 45% of the total shell cost.</p>
+      
+      <p><strong>3. Closed-Cell Spray Foam ($1.75 to $2.50 / sq ft of envelope):</strong> Traditional fiberglass batt insulation performs poorly against metal panels due to condensation risks. Closed-cell spray foam seals all air infiltration, creates a vapor barrier, and adds racking strength to the building envelope with an R-value of roughly R-6.5 to R-7.0 per inch.</p>
+
+      <p><strong>4. MEP & Interior Finishing ($60.00 to $110.00 / sq ft of living space):</strong> Just like any conventional home, interior costs depend entirely on choices: granite vs laminate countertops, custom tile showers, multi-zone ductless mini-split heat pumps, and custom lighting fixtures.</p>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="faq-section">
+      <h2 style="font-size:1.4rem; color:#ffffff; margin-bottom:16px;">Frequently Asked Questions (FAQ)</h2>
+      <div class="faq-item">
+        <div class="faq-q">Can you get a traditional mortgage on a barndominium?</div>
+        <div class="faq-a">Yes, but financing a barndominium requires finding a lender familiar with post-frame or non-traditional construction, such as farm credit unions (e.g. Farm Credit, AgSouth) or regional banks that offer construction-to-permanent loans. Having stamped engineered blueprints and an itemized cost estimate significantly improves loan approval rates.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does it take to build a barndominium from start to finish?</div>
+        <div class="faq-a">The steel shell can often be erected on the slab in just 2 to 3 weeks once materials arrive on site. Complete interior buildout, plumbing, electrical, and finishing typically takes 4 to 8 months, which is 20% to 40% faster than conventional custom residential construction.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What are the most popular barndominium sizes?</div>
+        <div class="faq-a">The most popular sizes are 40×60 (2,400 sq ft, commonly built as a 3-bedroom, 2-bath home with a 2-car shop), 30×40 (1,200 sq ft, ideal for compact 2-bedroom starter homes or lake cabins), and 50×80 (4,000 sq ft for expansive luxury homes with large agricultural or RV workshops).</div>
+      </div>
+    </section>
+
+    <!-- Bottom AdSense Banner -->
+    <div style="text-align:center; margin: 32px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+      <p>© 2026 <a href="https://sebiglesias.com.ar/">sebiglesias.com.ar</a> · Barndominium Cost Estimator & Building Planner.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
